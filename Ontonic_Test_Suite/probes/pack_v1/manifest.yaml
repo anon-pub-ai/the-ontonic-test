@@ -1,0 +1,8 @@
+pack_id: ont_v1
+counts:
+  C1_atomic: 30
+  C2_atomic: 30
+  C3_atomic: 30
+  C2_chains: 5
+  C3_chains: 5
+notes: Expanded, deterministic probes for Ontonic Test.
