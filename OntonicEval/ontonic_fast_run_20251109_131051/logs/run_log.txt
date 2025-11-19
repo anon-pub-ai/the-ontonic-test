@@ -733,3 +733,81 @@
 [2025-11-11 07:38:58] [Model C] executed:150 skipped:0
 [2025-11-11 07:38:59] [metrics] session summary -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/summary_session.csv
 [2025-11-11 07:48:23] [metrics] full recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
+[2025-11-17 14:13:45] [metrics] rubric-aligned recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
+[2025-11-17 14:17:51] [metrics] rubric-aligned recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
+[2025-11-17 16:36:43] Packs loaded: c1_atomic:30, c2_atomic:30, c3_atomic:30, c2_chains:5, c3_chains:5
+[2025-11-17 16:36:44] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-17 16:38:23] [evaluator] loaded
+[2025-11-17 16:38:43] [metrics] full recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
+[2025-11-17 16:38:58] [Resume] Loaded 1050 prior records; 1050 unique keys
+[2025-11-17 16:38:58] === MODEL: Model A | microsoft/phi-3-mini-4k-instruct
+[2025-11-17 16:38:58] [load] microsoft/phi-3-mini-4k-instruct
+[2025-11-17 16:41:16] [Model A] executed:0 skipped:150
+[2025-11-17 16:41:16] === MODEL: Model B | Qwen/Qwen2.5-3B-Instruct
+[2025-11-17 16:41:16] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-17 16:41:48] [load] fp16 eager failed: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 14.74 GiB of which 10.12 MiB is free. Process 5958 has 14.73 GiB memory in use. Of the allocated memory 14.30 GiB is allocated by PyTorch, and 337.12 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables). Retrying with attn='sdpa'.
+[2025-11-17 16:42:14] [Model B] executed:0 skipped:150
+[2025-11-17 16:42:14] === MODEL: Model C | TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-17 16:42:14] [load] TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-17 16:43:17] [Model C] executed:0 skipped:150
+[2025-11-17 17:01:21] [metrics] full recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
+[2025-11-18 13:05:35] Packs loaded: c1_atomic:30, c2_atomic:30, c3_atomic:30, c2_chains:5, c3_chains:5
+[2025-11-18 13:05:36] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-18 13:07:03] [evaluator] loaded
+[2025-11-18 13:07:34] [Resume] Loaded 1050 prior records; 1050 unique keys
+[2025-11-18 13:07:34] === MODEL: Model A | microsoft/phi-3-mini-4k-instruct
+[2025-11-18 13:07:34] [load] microsoft/phi-3-mini-4k-instruct
+[2025-11-18 13:10:05] [Model A] executed:0 skipped:150
+[2025-11-18 13:10:05] === MODEL: Model B | Qwen/Qwen2.5-3B-Instruct
+[2025-11-18 13:10:05] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-18 13:10:36] [load] fp16 eager failed: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 14.74 GiB of which 10.12 MiB is free. Process 11715 has 14.73 GiB memory in use. Of the allocated memory 14.30 GiB is allocated by PyTorch, and 337.12 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables). Retrying with attn='sdpa'.
+[2025-11-18 13:11:02] [Model B] executed:0 skipped:150
+[2025-11-18 13:11:02] === MODEL: Model C | TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-18 13:11:02] [load] TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-18 13:11:44] [Model C] executed:0 skipped:150
+[2025-11-18 13:12:33] [metrics] full recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
+[2025-11-19 00:25:44] Packs loaded: c1_atomic:30, c2_atomic:30, c3_atomic:30, c2_chains:5, c3_chains:5
+[2025-11-19 00:25:44] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 00:27:20] [evaluator] loaded
+[2025-11-19 00:27:21] [Resume] Loaded 1050 prior records; 1050 unique keys
+[2025-11-19 00:27:21] === MODEL: Model A | microsoft/phi-3-mini-4k-instruct
+[2025-11-19 00:27:21] [load] microsoft/phi-3-mini-4k-instruct
+[2025-11-19 00:29:29] [Model A] executed:0 skipped:150
+[2025-11-19 00:29:29] === MODEL: Model B | Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 00:29:29] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 00:29:59] [load] fp16 eager failed: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 14.74 GiB of which 10.12 MiB is free. Process 4722 has 14.73 GiB memory in use. Of the allocated memory 14.30 GiB is allocated by PyTorch, and 337.12 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables). Retrying with attn='sdpa'.
+[2025-11-19 00:30:18] [Model B] executed:0 skipped:150
+[2025-11-19 00:30:18] === MODEL: Model C | TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-19 00:30:18] [load] TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-19 00:31:14] [Model C] executed:0 skipped:150
+[2025-11-19 00:59:57] Packs loaded: c1_atomic:30, c2_atomic:30, c3_atomic:30, c2_chains:5, c3_chains:5
+[2025-11-19 00:59:57] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 01:00:27] [evaluator] loaded
+[2025-11-19 01:01:29] [Resume] Loaded 1050 prior records; 1050 unique keys
+[2025-11-19 01:01:29] === MODEL: Model A | microsoft/phi-3-mini-4k-instruct
+[2025-11-19 01:01:29] [load] microsoft/phi-3-mini-4k-instruct
+[2025-11-19 01:02:05] [Model A] executed:0 skipped:150
+[2025-11-19 01:02:05] === MODEL: Model B | Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 01:02:05] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 01:02:34] [Model B] executed:0 skipped:150
+[2025-11-19 01:02:34] === MODEL: Model C | TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-19 01:02:34] [load] TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-19 01:02:44] [Model C] executed:0 skipped:150
+[2025-11-19 02:22:05] [rescored] wrote /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/combined/all_triplets_rescored.jsonl
+[2025-11-19 02:22:06] [metrics] full recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
+[2025-11-19 07:38:27] Packs loaded: c1_atomic:30, c2_atomic:30, c3_atomic:30, c2_chains:5, c3_chains:5
+[2025-11-19 07:38:28] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 07:39:55] [evaluator] loaded
+[2025-11-19 07:39:56] [Resume] Loaded 1050 prior records; 1050 unique keys
+[2025-11-19 07:39:56] === MODEL: Model A | microsoft/phi-3-mini-4k-instruct
+[2025-11-19 07:39:56] [load] microsoft/phi-3-mini-4k-instruct
+[2025-11-19 07:41:53] [Model A] executed:0 skipped:150
+[2025-11-19 07:41:53] === MODEL: Model B | Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 07:41:53] [load] Qwen/Qwen2.5-3B-Instruct
+[2025-11-19 07:42:22] [load] fp16 eager failed: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 14.74 GiB of which 10.12 MiB is free. Process 4232 has 14.73 GiB memory in use. Of the allocated memory 14.30 GiB is allocated by PyTorch, and 337.12 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables). Retrying with attn='sdpa'.
+[2025-11-19 07:42:42] [Model B] executed:0 skipped:150
+[2025-11-19 07:42:43] === MODEL: Model C | TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-19 07:42:43] [load] TinyLlama/TinyLlama-1.1B-Chat-v1.0
+[2025-11-19 07:44:28] [Model C] executed:0 skipped:150
+[2025-11-19 09:57:12] [rescored] wrote /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/combined/all_triplets_rescored.jsonl
+[2025-11-19 09:57:12] [metrics] full recompute -> /content/drive/MyDrive/OntonicEval/ontonic_fast_run_20251109_131051/metrics/metrics_summary.csv
