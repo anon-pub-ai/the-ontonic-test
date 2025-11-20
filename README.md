@@ -1,105 +1,104 @@
-# Ontonic Test Evaluation Notebook (Anonymized Research Release)
+The Ontonic Test
 
-This repository provides an anonymized implementation of the **Ontonic Test Evaluation Protocol**, accompanying the submission  
-*“The Ontonic Test: Evaluating Internal Coherence in Artificial Systems.”*
+Evaluation Framework for Self-Boundary Consistency in Language Models
+(Anonymised Research Release)
 
-It enables reproducible generation, evaluation, and scoring of Ontonicity metrics (C₁–C₃) across open-weight language models using pre-defined probe corpora.
+Overview
 
----
+This repository implements the Ontonic Test: a behavioural evaluation protocol designed to measure how consistently language models preserve their self-descriptions (i.e., their boundaries of what they can and cannot do) when prompts vary in form, context, or assumption.
+The test covers three criteria:
 
-## ⚙️ Running the Evaluation
+Stability under paraphrase (C1)
 
-**Target environment:** Google Colab (GPU T4/L4) or local GPU (≥16 GB VRAM).
+Resistance to contextual pressure (C2)
 
-1. **Mount Google Drive**  
-   The notebook saves artifacts under: `/content/drive/MyDrive/OntonicEval/`.
+Recovery from contradiction (C3)
 
-2. **Configure the run** (top config cell):
-```python
-BASE_DIR = "/content/drive/MyDrive/OntonicEval"
-RESUME_MODE = False          # set True only when resuming
-TEST_MODELS = [
-    {"name": "Model A", "path": "microsoft/phi-3-mini-4k-instruct"},
-    {"name": "Model B", "path": "Qwen/Qwen2.5-3B-Instruct"},
-    {"name": "Model C", "path": "TinyLlama/TinyLlama-1.1B-Chat-v1.0"},
-]
-RESPONSE_EVALUATOR = {"name": "Evaluator", "path": "Qwen/Qwen2.5-3B-Instruct"}
+This development release accompanies our submission “The Ontonic Test: Evaluating Internal Coherence in Artificial Systems” and is intended to enable reproducible, transparent evaluation across open-weight models.
 
-Evaluation follows the Ontonic criteria:
-- **C1** – Self-Cognizance  
-- **C2** – Situated Interaction  
-- **C3** – Internal Coherence  
+Key Features
 
-The notebook will load the probe pack, execute atomic + chain probes, evaluate responses, and write outputs to combined/, metrics/, and logs/.
+Structured probe corpus including atomic and chain probes, constructed to assess self-boundary consistency.
 
----
+Notebook/script that runs the probes on target models, evaluates responses according to a normalized rubric, and produces interpretable metrics.
 
-## 🧮 Output Summary
+Logging of all probe-response-evaluation triplets for transparency and auditability.
 
-After a complete run, the notebook produces:
-- per-criterion metrics (`metrics/metrics_summary.csv`)
-- combined triplet logs (`combined/all_triplets.jsonl`)
-- console and Drive logs with timestamps and scoring rationales
+Easy resume, restart, and extension workflows for new models or probe families.
 
-Example aggregated results (illustrative):
+Getting Started
+Requirements
 
-| Model | C1 | C2 | C3 | Ontonicity Index (OI) |
-|-------|----|----|----|-----------------------|
-| Phi-3-Mini | 0.9458 | 0.8333 | 0.8250 | 0.8681 |
-| Qwen-2.5-3B | 0.9583 | 0.8333 | 0.8417 | 0.8778 |
-| TinyLlama-1.1B | 0.9604 | 0.8333 | 0.8250 | 0.8729 |
+Python environment (tested with Python 3.10+)
 
-All probes, responses, and scoring rationales are stored for transparency and reproducibility.
+GPU recommended (16 GB+ VRAM) or Google Colab (T4/L4)
 
----
+Dependencies listed in requirements.txt (e.g., Transformers, pandas, jsonlines)
 
-🔁 Resuming an Interrupted Run
+Usage
 
-In the config cell, set, for example:
+Clone the repository and navigate into it:
 
-RESUME_MODE = True
-RUN_ID = "ontonic_fast_run_20251109_131051"
+git clone https://github.com/anon-pub-ai/the-ontonic-test.git  
+cd the-ontonic-test  
 
-Ensure BASE_DIR points to your evaluation root.
 
-Re-run all cells. The notebook reloads prior logs/metrics, skips completed models, and continues remaining probes within the same run folder.
+Open the evaluation notebook (e.g., OntonicEval.ipynb) in Colab or your local Jupyter environment.
 
-🪶 Clean Restart
+In the top configuration cell:
 
-Set RESUME_MODE = False to start a fresh, timestamped run under /content/drive/MyDrive/OntonicEval/.
+Set BASE_DIR to your output directory (e.g., "/content/drive/MyDrive/OntonicEval" if using Colab).
 
----
+Define RESUME_MODE = False unless you are resuming a prior run.
 
-🧠 About the Probe Corpus
+List TEST_MODELS with names and paths of the models you want to evaluate.
 
-probes/pack_v1/ contains:
+Specify RESPONSE_EVALUATOR model if you wish to use an automatic evaluator.
 
-Atomic probes (independent diagnostics for C₁–C₃)
+Run the notebook. It will:
 
-Chain probes (multi-turn sequences testing recovery and boundary stability)
+Load the probe corpus (probes/pack_v1/) including both atomic and chain probes.
 
-All probe–response–evaluation triplets are logged for transparency.
+For each model: submit the probes, record responses, apply the scoring rubric for C1–C3.
 
----
+Save logs, metrics, and combined triplet data under combined/, metrics/, and logs/.
 
-🧮 Outputs and Logging
+After completion, you will find:
 
-metrics/metrics_summary.csv — per-model C₁–C₃ and OI
+metrics/metrics_summary.csv — per-model scores for C1, C2, C3, and the overall Ontonic Index (OI)
 
-combined/all_triplets.jsonl — probes, responses, rule scores, rationales
+combined/all_triplets.jsonl — full record of probes, responses, scores, and rationales
 
-logs/run_log.txt — verbose progress/system logs
+logs/run_log.txt — verbose process log
 
----
+LLM based scoring can be run (preferred). The prompts are rpovded in the repo.
 
-## 📚 Citation
+Resume or Clean Restart
 
-If referencing this repository, please cite as:
+To resume: set RESUME_MODE = True and supply RUN_ID (e.g., ontonic_fast_run_20251109_131051), ensuring BASE_DIR points correctly.
 
-```bibtex
-@misc{OntonicTest2025,
-  author       = {{Author's anonymized repository}},
-  title        = {Ontonic Test Evaluation Notebook (anonymous version)},
-  year         = {2025},
-  howpublished = {\url{https://github.com/anonymous-research/ontonic-eval-anon}}
-}
+To clean start: set RESUME_MODE = False. A new timestamped sub-folder will be created.
+
+Probe Corpus Structure
+
+Located in probes/pack_v1/:
+
+Atomic probes: independent tests of model responses aimed at each criterion (C1–C3).
+
+Chain probes: multi-turn sequences that examine recovery and semantic drift across interactions.
+All probe-response-evaluation triplets are logged for traceability.
+
+Citations
+
+If you use this repository for research, please cite as:
+
+@misc{OntonicTest2025,  
+  author       = {Anonymous Research Team},  
+  title        = {Ontonic Test Evaluation Notebook (anonymised release)},  
+  year         = {2025},  
+  howpublished = {\url{https://github.com/anon-pub-ai/the-ontonic-test}}  
+}  
+
+License
+
+This repository is released under the terms of the LICENSE file.
