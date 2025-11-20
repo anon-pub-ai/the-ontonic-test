@@ -48,11 +48,7 @@ Folder OntonicEval has run results.
 - **Full audit trail** via JSONL triplet logging  
 - **Resume or clean-start** workflow for long-running evaluations  
 
----
-
-## Getting Started
-
-### 1. Install Requirements
+**Install Requirements**
 
 git clone https://github.com/anon-pub-ai/the-ontonic-test.git
 cd the-ontonic-test
@@ -60,7 +56,7 @@ pip install -r requirements.txt
 Python 3.10+ recommended.
 GPU or Google Colab (T4/L4/A100) strongly recommended.
 
-Running the Evaluation
+**Running the Evaluation**
 1. Open the Notebook
 Use either:
 
@@ -82,7 +78,7 @@ RESPONSE_EVALUATOR — optional evaluator model
 
 RUN_ID — only needed when resuming
 
-3. Execute the Pipeline
+**Execute the Pipeline**
 The notebook will:
 
 Load probe packs (atomic + chain)
@@ -93,7 +89,7 @@ Compute semantic drift and recovery stability -- ALTERNATIVELY - LLMs can be use
 
 Save logs, triplets, metrics, and summaries
 
-Outputs
+**Outputs**
 After a successful run, you will find:
 
 Metrics
@@ -122,7 +118,7 @@ Metadata: probe IDs, contexts, expected behaviours, and scoring anchors
 
 All probes are model-agnostic and intentionally minimalistic.
 
-Citation
+**Citation**
 If you use this repository in research, please cite:
 
 bibtex
@@ -133,5 +129,5 @@ Copy code
   year         = {2025},
   howpublished = {\url{https://github.com/anon-pub-ai/the-ontonic-test}}
 }
-License
+**License**
 Released under the terms of the included LICENSE file.
