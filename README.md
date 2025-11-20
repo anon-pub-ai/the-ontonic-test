@@ -20,22 +20,8 @@ This repository contains the probe corpus, scoring rubric, and evaluation notebo
 
 ## Repository Structure
 
-the-ontonic-test/
-│
-├── probes/
-│ └── pack_v1/ # Atomic and chain probe families
-│
-├── notebooks/
-│ └── OntonicEval.ipynb # Main evaluation notebook
-│
-├── combined/ # Full probe–response–score triplets
-├── metrics/ # Aggregated metrics and summaries
-├── logs/ # Run logs and process traces
-│
-├── requirements.txt
-└── README.md
-
-Folder OntonicEval has run results.
+Folder Ontonic_Test_Suite has generator code, probes, prompts and evaluation artefacts.
+Folder OntonicEval has evaluation results.
 
 ---
 
